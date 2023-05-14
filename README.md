@@ -21,9 +21,9 @@ Component : [Graph.jsx]
 
 
 #  The jsx part :-
-. First of a a button is created in which an onclick calls the fetchAndParseData method to fetch the data into the front-end.
-. After clicking the submit button the histogram will be shown with top 20 most occuring words .
-. Also an another button is created in which under the onclick method handleExport is called through which we are giving the rights to download the csv file         through this button.
+# First of a a button is created in which an onclick calls the fetchAndParseData method to fetch the data into the front-end.
+# After clicking the submit button the histogram will be shown with top 20 most occuring words .
+# Also an another button is created in which under the onclick method handleExport is called through which we are giving the rights to download the csv file         through this button.
 
 
 
