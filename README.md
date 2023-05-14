@@ -1,11 +1,11 @@
-Netlify Link : https://terribly-tiny-tales.netlify.app/
+# Netlify Link : https://terribly-tiny-tales.netlify.app/
 
 Libraries Used : 
 1. chart :  ^0.1.2
 2. chart.js :  ^4.3.0
 3. papaparse : ^5.4.1
 
-Component : [Graph.jsx]
+# Component : [Graph.jsx]
 
 # function fetchAndParseData(): This is a function which first call the API to get the data from it and store the data in the text variable , after that we will                              define the proerties  for the text i.e, converting them to lowecase, replacing the whitespaces, spliting all the words on the basis of                            space,and then storing all the words in the form of an array by using filter method . 
 
