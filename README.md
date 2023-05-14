@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+Netlify Link : https://terribly-tiny-tales.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Libraries Used : 
+1. chart :  ^0.1.2
+2. chart.js :  ^4.3.0
+3. papaparse : ^5.4.1
 
-## Available Scripts
+Component : [Graph.jsx]
 
-In the project directory, you can run:
+# function fetchAndParseData(): This is a function which first call the API to get the data from it and store the data in the text variable , after that we will                              define the proerties  for the text i.e, converting them to lowecase, replacing the whitespaces, spliting all the words on the basis of                            space,and then storing all the words in the form of an array by using filter method . 
 
-### `npm start`
+# A variable wordCounts is defined which is reducing the words by using the .reduce methos it iterates through all the words and stores it in the counts array through which we will find the number of occurance of the words.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# The variable topWords is defined which is sorting the word occurance array in decending order then slicing it to top 20 words.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# After reteriving the top 20 most occurance words we are converting it into CSV format by suing the Papa.unparse method.
 
-### `npm test`
+# SetHistofranData : Now we will sepeate the 2D array into two different array as labels and data , which will be store in the histogram data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# function handleExportClick() : First it will create a Blob of the csv data then it will create an object url for the csv data and thit will be downloaded in the                                    download folder when the function will be evoked.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#  The jsx part :-
+. First of a a button is created in which an onclick calls the fetchAndParseData method to fetch the data into the front-end.
+. After clicking the submit button the histogram will be shown with top 20 most occuring words .
+. Also an another button is created in which under the onclick method handleExport is called through which we are giving the rights to download the csv file         through this button.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
